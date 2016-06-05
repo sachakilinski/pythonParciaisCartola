@@ -1,0 +1,24 @@
+.apelido{
+    font-size: 10px;
+    text-align: center;
+    width: 60px;
+}
+.pontos{
+    font-size: 10px;
+    text-align: center;
+
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, th {
+    background-color: #c4d9ff;
+}
+
+th{
+    text-align: center;
+}
+
+.atualizacao{
+    background-color: cyan;
+    text-align: center;
+    font-size: 15px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Parciais da Rodada do Ilegrao</title>
+</head>
+<body>
+    <div class="atualizacao"> última atualização: {{timestamp}}</div>
+    <table class="table-striped table-responsive">
+        <thead>
+            <th>Cartola</th>
+            <th>Equipe</th>
+            <th>Total</th>
+            <th>Escalacao</th>
+        </thead>
+        <tbody>
+            {% for cartola, nome, parcial, apelidos, pontos in data %}
+            <tr>
+               <td>{{cartola}}</td>
+                <td>{{nome}}</td>
+                <td>{{parcial}}</td>
+                <td>
+                    <table>
+                        <tr>
+                            {% for apelido in apelidos %}
+                            <td class="apelido">{{apelido}}</td>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            {% for ponto in pontos %}
+                            <td class="pontos">{{ponto}}</td>
+                            {% endfor %}
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
